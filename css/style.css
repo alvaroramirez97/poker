@@ -1,0 +1,361 @@
+body{background-color: black;
+    margin: 0;
+    padding: 0;
+}
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/vdarkw.jpg);
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr 3fr 3fr 7fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "header header"
+        "botones jugadores"
+        "botones jugadores"
+        "botones jugadores"
+        "botones jugadores"
+        "botones mesa"
+}
+
+/* FORMULARIO */
+.formu{
+    padding: 10px;
+    background-color: rgba(255,255,255,0.3);
+    border: 4px solid black;
+    padding: 
+}
+.formu input{
+    width: 75%;
+    height: 75%;
+    margin: 5px auto;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+#login input{
+    margin: 5px auto;
+    border-radius: 5px;
+    width: 100%;
+}
+#login .boton{
+    height: 7%;
+}
+
+/* CABECERA */ 
+.header{
+    grid-area: header;
+
+    background-color: #F2F2F2;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header img{
+    max-height: 50px;
+    height: 50%;
+}
+
+
+/*BARRA DE BOTONES */
+#usu{
+    padding: 5px;
+    margin: 5px;
+    background-color: #F2F2F2;
+    font-weight: bold;
+}
+
+.botones{
+    grid-area: botones;
+    background-color: #022742;
+    color: black;
+
+}
+.botones h3{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border: 3px solid #022742;
+    background-color: #F2F2F2;
+}
+
+
+/* ELEMENTOS */
+
+.boton{
+    border: solid black 3px;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    font-size: 80%;
+    font-weight: bold;
+}
+.boton:hover{
+    background-color:#098EFA;
+    color: white;
+}
+
+#cm1, #cm2, #cm3, #cm4, #cm5, #cm6{
+    height: 150px;
+    padding: 5px;
+}
+.carta{
+    padding: 3px;
+    height: 70px;
+}
+.carta_mesa{
+    position: absolute;
+    background-size: cover;
+    width: 70px;
+    height: 107px;
+}
+
+
+
+/*MESA DE CARTAS */
+#mesa{
+    grid-area: mesa;
+
+    border-radius: 100px;
+    border: 10px solid #F29F05;
+    padding: 30px;
+    margin: 10px 0;
+}
+#monton{
+    height: 150px;
+    padding: 5px;
+    z-index: +50;
+}
+
+
+/* SECCION DE JUGADORES */
+#jugador1, #jugador2, #jugador3, #jugador4, #jugador5, #jugador6, #jugador7, #jugador8{ 
+    box-sizing: border-box;
+    background-color: darkgray;
+    color: black;
+    border: 4px solid black;
+    display: flex;
+    width: 50%;
+    padding: 3px;
+
+}
+.jugador{
+    font-size: 12;
+}
+.fichas{
+    border: 2px solid black;
+    padding: 5px;
+    background-color: #F2F2F2;
+    width: 90px;
+    font-size: 15;
+}
+
+#grupos{
+    grid-area: jugadores;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "gj1"
+        "gj2"
+        "gj3"
+        "gj4"
+}
+
+.grupojugador1{
+    grid-area: gj1;
+    display: flex;
+}
+.grupojugador2{
+    grid-area: gj2;
+    display: flex;
+} 
+.grupojugador3{
+    grid-area: gj3;
+    display: flex;
+} 
+.grupojugador4{
+    grid-area: gj4;
+    display: flex;
+} 
+
+/* JUGADORES */
+#jugador1{
+    background-color: #F29F05;
+    color: black;
+    font-weight: bold;
+    width: 50%;
+}
+
+
+
+
+
+
+/* -------------------------------------------------------- ANIMACIONES ----------------------------------------------------------- */
+
+/* COLORINES DE JUGADORES */
+
+.aj2{
+    animation: color2 1s 3;
+}
+@keyframes color2{
+    10%  {background-color: green;}
+    20%  {background-color: darkcyan;}
+    30%  {background-color: darkgray;}
+}
+
+.aj4{
+    animation: color4 1s 3;
+}
+@keyframes color4{
+    10%  {background-color: darkgray;}
+    20%  {background-color: green;}
+    30% {background-color: darkcyan;}
+    40% {background-color: darkgray;}
+}
+
+.aj6{
+    animation: color6 1s 3;
+}
+@keyframes color6{
+    20%  {background-color: darkgray;}
+    30% {background-color: green;}
+    40%  {background-color: darkcyan;}
+    50%  {background-color: darkgray;}
+}
+
+.aj8{
+    animation: color8 1s 3;
+}
+@keyframes color8{
+    30%  {background-color: darkgray;}
+    40% {background-color: green;}
+    50%  {background-color: darkcyan;}
+    60%  {background-color: darkgray;}
+}
+
+.aj7{
+    animation: color7 1s 3;
+}
+@keyframes color7{
+    40%  {background-color: darkgray;}
+    50% {background-color: green;}
+    60%  {background-color: darkcyan;}
+    70%  {background-color: darkgray;}
+}
+
+.aj5{
+    animation: color5 1s 3;
+}
+@keyframes color5{
+    50%  {background-color: darkgray;}
+    60% {background-color: green;}
+    70%  {background-color: darkcyan;}
+    80%  {background-color: darkgray;}
+}
+
+.aj3{
+    animation: color3 1s 3;
+}
+@keyframes color3{
+    60%  {background-color: darkgray;}
+    70%  {background-color: green;}
+    80% {background-color: darkcyan;}
+    90% {background-color: darkgray;}
+}
+
+/* ----------------------     */
+
+@keyframes ani1{
+    0% {transform: translate(0px,0px);transform:rotate(-180deg);}
+}
+@keyframes ani2{
+    0% {transform: translate(0px,0px);transform:rotate(-180deg);}
+    20% {transform: translate(0px,0px);transform:rotate(-180deg);}
+}
+@keyframes ani3{
+    0% {transform: translate(0px,0px);transform:rotate(-180deg);}
+    40% {transform: translate(0px,0px);transform:rotate(-180deg);}
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+.carta_movida1{
+    transform: translate(500px,0px);
+    animation: ani1 1.5s 1;
+}
+.carta_movida2{
+    transform: translate(400px,0px);
+    animation: ani2 1.5s 1;
+}
+.carta_movida3{
+    transform: translate(300px,0px);
+    animation: ani3 1.5s 1;
+}
+.carta_movida4{
+    transform: translate(200px,0px);
+}
+.carta_movida5{
+    transform: translate(100px,0px);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .contenedor{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 3fr 2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header"
+            "gj1"
+            "gj2"
+            "gj3"
+            "gj4"
+            "mesa"
+            "botones"
+    }
+
+    /* ELEMENTOS */
+    #cm1, #cm2, #cm3, #cm4, #cm5, #cm6{
+        height: 70px;
+        padding: 2px;
+    }
+    .carta{
+        padding: 2px;
+        height: 40px;
+    }
+
+    .botones input{
+        border-radius: 3px;
+        width: 25%;
+        height: 100%;
+        font-size: 80%;
+    }
+
+    /*MESA DE CARTAS */
+    #mesa{
+        grid-area: mesa;
+
+        border-radius: 60px;
+        border: 7px solid #F29F05;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    #monton{
+        height: 70px;
+        padding: 2px;
+        z-index: +50;
+    }
+    
+    /* JUGADORES */
+    .grupojugador1, .grupojugador2, .grupojugador3, .grupojugador4{
+        max-height: 70px;
+    }
+}
+
+
+
+
+
